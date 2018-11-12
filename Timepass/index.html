@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hello world</title>
+
+
+	<style>
+		html{
+			box-sizing: border-box;
+		}
+
+		*,*:before,*:after{
+			box-sizing: inherit;
+			margin: 0;
+			padding: 0;
+		}
+
+		.cont{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background-image: url(https://www.gettyimages.in/gi-resources/images/500px/983794168.jpg);
+			background-size: cover;
+			overflow: hidden;
+		}
+
+		.app{
+			position: relative;
+			min-width: 850px;
+			height: 540px;
+			box-shadow: 0 0 60px rgba(0,0,0,0.3);
+			overflow: hidden;
+		}
+
+		.app__bgimg{
+			position: absolute;
+			top: 0;
+			left: -2.5%;
+			width: 105%;
+			height: 100%;
+			transition: transform 3.5s 770ms; 
+		}
+
+		.app__bgimg-image{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		.app__bgimg-image--1{
+			background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR3M3tLdF8lUSVAsigqS_HcN9ztsjlejMibfU-IFtbJHdhdao7Pg) center center no-repeat;
+			background-size: cover;
+		}
+
+
+		.app__bgimg-image--2{
+			background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR3M3tLdF8lUSVAsigqS_HcN9ztsjlejMibfU-IFtbJHdhdao7Pg) center center no-repeat;
+			background-size: cover;
+			opacity: 0;
+			transition: opacity 0ms 1300ms;
+			will-change: opacity;
+		}
+
+		.app__text{
+			position: absolute;
+			right: 165px;
+			top: 150px;
+			font-family: tahoma;
+			text-transform: uppercase;
+			z-index: 1;
+		}
+
+		.app__text-line{
+			transition: transform 1500ms 400ms,opacity 750ms 500ms;
+			will-change:transform, opacity;
+			user-select: none;
+		}
+
+		.app__text-line--4{
+			transition: transform 1500ms 2300ms,opacity 1500ms 3500ms;
+		}
+
+
+		.app__text-line--3{
+			transition: transform 1500ms 2200ms,opacity 1500ms 3250ms;
+		}
+
+
+		.app__text-line--2{
+			transition: transform 1500ms 2100ms,opacity 1500ms 3000ms;
+		}
+
+
+		.app__text-line--1{
+			margin-top: 15px;
+		}
+
+		.app__text-line--1 img{
+			width: 50px;
+		}
+
+		.app__text--1 .app__text-line{
+			transform: translate3d(0,-125px,0);
+			opacity: 0;
+		}
+
+		.app__text--2{
+			right: inherit;
+			top: 250px;
+			left: 80px;
+			z-index: -1;
+			transition: z-index 1500ms;
+		}
+
+		.app-text--2 .app__text-line--3{
+			opacity: 0;
+			transition: transform 1500ms 450ms, opacity 400ms 650ms;
+		}
+
+		
+	</style>
+
+
+
+
+
+
+
+</head>
+<body>
+	<div class="cont">
+		<div class="mouse"></div>
+		<div class="app">
+			<div class="app__bgimg">
+				<div class="app__bgimg-image app__bgimg-image--1"></div>
+
+				<div class="app__bgimg-image app__bgimg-image--1"></div>
+
+			</div>
+		
+
+			<div class="app__img">
+				<img onmousedown="return false" src="https://www.gettyimages.in/gi-resources/images/500px/983794168.jpg">
+			</div>
+
+			<div class="app__text app__text--1">
+				<div class="app__text-line app__text-line--4">Amazing</div>
+				<div class="app__text-line app__text-line--3">Sahil</div>
+				<div class="app__text-line app__text-line--2">Sahu</div>
+			</div>
+
+			<div class="app__text app__text--2">
+				<div class="app__text-line app__text-line--4">Creative</div>
+				<div class="app__text-line app__text-line--3">Sahil</div>
+				<div class="app__text-line app__text-line--2">Sahu</div>
+			</div>
+		</div>
+
+		<div class="pages">
+			<ul class="pages__list">
+				<li data-target='1' class="pages__item pages__item--1 page__item-active"></li>
+				<li data-target='2' class="pages__item pages__item--2"></li>
+			</ul>
+		</div>
+
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Skrool</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+	<style>
+		html,body{
+			position: relative;
+			margin: 0;
+			height: 2200px;
+		}
+
+		#image{
+			width: 100%;
+			height: auto;
+			min-height: 900px;
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-image: url(bg.jpg);
+			background-attachment: fixed;
+		}
+	</style>
+</head>
+<body>
+	<div id="image" data-0="background-size:100% auto;" data-500="background-size:130% auto; position:fixed; top:0;" data-501="position:absolute;"></div>
+	<div>
+	<p style="color: red;">HELLLLLOOEEEEEEEJKFN</p>
+	</div>
+	<script>
+		$(document).ready(function(){
+
+			var s =skrollr.init();
+		});
+	</script>
+</body>
+</html>
